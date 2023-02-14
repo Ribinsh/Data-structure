@@ -38,7 +38,8 @@ class Node {
         }
       }
 
-      preorder(node){
+      preorder(node){ 
+
         if(node != null){
             console.log(node.data);
             this.preorder(node.left)
@@ -58,7 +59,6 @@ class Node {
         if(node != null){
            
             this.postorder(node.left)
-            
             this.postorder(node.right)
             console.log(node.data);
         }
@@ -110,8 +110,28 @@ class Node {
         else return this.findMinNode(node.left);
       }
 
+      find(value) {
+        let currentNode = this.root;
+    
+        while (currentNode) {
+          if (value < currentNode.value) {
+            currentNode = currentNode.left;
+          } else if (value > currentNode.value) {
+            currentNode = currentNode.right;
+          } else {
+            return currentNode;
+          }
+        }
+    
+        return null;
+      }
+
+
+       
+    }
+
      
-}
+
 
 
 
