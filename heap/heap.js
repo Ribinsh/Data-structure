@@ -1,4 +1,4 @@
-function heappush(heap, newKey) {
+function heapPush(heap, newKey) {
     heap.push(newKey);
   
     let curr = heap.length - 1;
@@ -14,7 +14,7 @@ function heappush(heap, newKey) {
     }
   }
   
-  function heappop(heap) {
+  function heapPop(heap) {
     const n = heap.length;
     [heap[0], heap[n - 1]] = [heap[n - 1], heap[0]];
     const removedKey = heap.pop();
@@ -39,13 +39,40 @@ function heappush(heap, newKey) {
   
     return removedKey;
   }
-  let aHeap = [];
+
+  function descending (heap){
+        let n = heap.length-1
+        let a = []
+        while (n>0){
+            
+        }
+  }
+
   
-  heappush(aHeap, 9);
-  heappush(aHeap, 2);
-  heappush(aHeap, 1);
-  heappush(aHeap, 10);
-  heappush(aHeap, 0);
-  heappop(aHeap);
+
   
-  console.log(aHeap);
+
+
+
+//   let heap1 = [];
+  let heap2 = []
+  
+//   heapPush(heap1 , 9);
+//   heapPush(heap1 , 2);
+//   heapPush(heap1 , 1);
+//   heapPush(heap1 , 10);
+//   heapPush(heap1 , 5);
+//   heapPush(heap1 , 8);
+
+  heapPush(heap2, 5)
+  heapPush(heap2, 6)
+  heapPush(heap2, 7)
+  heapPush(heap2, 8)
+
+//   heapPop(heap1 );
+  
+ 
+
+  console.log(heap2 );
+
+  let arr1 =[5,6,7,8]

@@ -13,6 +13,20 @@ class heap {
             console.log("Min heap");
         }
     }
+
+    isMinHeap(arr) {
+        for (let i = 0; i < arr.length; i++) {
+         
+          if (2 * i + 1 < arr.length && arr[2 * i + 1] < arr[i]) {
+            return false;
+          }
+        
+          if (2 * i + 2 < arr.length && arr[2 * i + 2] < arr[i]) {
+            return false;
+          }
+        }
+        return true;
+      }
 }
 
 let arr = [1, 5, 10, 6, 8, 12, 15]
@@ -22,3 +36,5 @@ a.check();
 let ar = [20,15,18,10,8,16,17]
 let b = new heap(ar)
 b.check();
+
+let arr1 =[5,6,7,8]
