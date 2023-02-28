@@ -1,6 +1,6 @@
 
 
-class queue {
+export default class queue {
     constructor(){
         this.items = []
     }
@@ -20,6 +20,9 @@ class queue {
             console.log(this.items[0]);
         }
     }
+    isEmpty() {
+        return this.items.length == 0;
+      }
 
 }
 

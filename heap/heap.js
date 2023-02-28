@@ -40,13 +40,7 @@ function heapPush(heap, newKey) {
     return removedKey;
   }
 
-  function descending (heap){
-        let n = heap.length-1
-        let a = []
-        while (n>0){
-            
-        }
-  }
+  
 
   
 
@@ -54,15 +48,15 @@ function heapPush(heap, newKey) {
 
 
 
-//   let heap1 = [];
+  let heap1 = [];
   let heap2 = []
   
-//   heapPush(heap1 , 9);
-//   heapPush(heap1 , 2);
-//   heapPush(heap1 , 1);
-//   heapPush(heap1 , 10);
-//   heapPush(heap1 , 5);
-//   heapPush(heap1 , 8);
+  heapPush(heap1 , 9);
+  heapPush(heap1 , 2);
+  heapPush(heap1 , 1);
+  heapPush(heap1 , 10);
+  heapPush(heap1 , 5);
+  heapPush(heap1 , 8);
 
   heapPush(heap2, 5)
   heapPush(heap2, 6)
@@ -74,5 +68,3 @@ function heapPush(heap, newKey) {
  
 
   console.log(heap2 );
-
-  let arr1 =[5,6,7,8]
