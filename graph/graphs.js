@@ -42,8 +42,7 @@ myGraph.addVertex("C");
 myGraph.addEdge("A", "B");
 myGraph.addEdge("B", "C");
 
-console.log(myGraph.vertices);
-
+console.log(myGraph.vertices)
 
 
 myGraph.removeVertex("B");

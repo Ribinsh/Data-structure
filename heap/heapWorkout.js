@@ -37,4 +37,4 @@ let ar = [20,15,18,10,8,16,17]
 let b = new heap(ar)
 b.check();
 
-let arr1 =[5,6,7,8]
+let arr1 =[6,-3,5,1,8]
