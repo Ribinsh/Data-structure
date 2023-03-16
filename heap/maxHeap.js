@@ -75,5 +75,5 @@ let heap = new MaxBinaryHeap(arr);
 // heap.insert(55)
 // heap.insert(1)
 heap.insert(100)
-heap.extractMax()
+console.log(heap.extractMax()); 
 heap.extractMax()

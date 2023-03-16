@@ -14,6 +14,8 @@ function heapPush(heap, newKey) {
     }
   }
   
+
+
   function heapPop(heap) {
     const n = heap.length;
     [heap[0], heap[n - 1]] = [heap[n - 1], heap[0]];
@@ -40,17 +42,39 @@ function heapPush(heap, newKey) {
     return removedKey;
   }
 
+
+  function heapSort(heap) {
+    const n = heap.length;
+
+    for(let i=n-1; i>0; i--){
+        [heap[0], heap[i]] = [heap[i], heap[0]];
+        
+        let curr = 0;
+      
+        while (2 * curr + 1 < n) {
+          const leftIndex = 2 * curr + 1;
+          const rightIndex = 2 * curr + 2;
+          const minChildIndex =
+            rightIndex < heap.length && heap[rightIndex] < heap[leftIndex]
+              ? rightIndex
+              : leftIndex;
+      
+          if (heap[minChildIndex] < heap[curr]) {
+            [heap[minChildIndex], heap[curr]] = [heap[curr], heap[minChildIndex]];
+            curr = minChildIndex;
+          } else {
+            continue;
+          }
+        }
+    }
+    
+    return heap
   
-
-  
-
-  
+   
+  }
 
 
-
-  let heap1 = [];
-  let heap2 = []
-  
+   let heap1 = [];
   heapPush(heap1 , 9);
   heapPush(heap1 , 2);
   heapPush(heap1 , 1);
@@ -58,14 +82,9 @@ function heapPush(heap, newKey) {
   heapPush(heap1 , 5);
   heapPush(heap1 , 8);
 
-  heapPush(heap2, 5)
-  heapPush(heap2, 6)
-  heapPush(heap2, 7)
-  heapPush(heap2, 8)
 
-//   heapPop(heap1 );
-  
- 
+  console.log(heap1);
+  console.log(heapSort(heap1));
 
-  console.log(heap2 );
-  
+
+
