@@ -25,7 +25,7 @@ return array
 function createMinheap(array){
     let mid = Math.floor(array.length/2)
 
-    for(let i = mid;i>=0 ;i++){
+    for(let i = mid;i>=0 ;i--){
         heapify(array,i, array.length)
     }
 }
