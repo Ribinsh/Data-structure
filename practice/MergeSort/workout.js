@@ -7,31 +7,16 @@ function mergeSort(arr){
     return merge(left , right)
 }
 
-function merge (arr1 , arr2){
-    let result = []
-    let i=0;
-    let j = 0 ;
-
-    while(i< arr1.length && j< arr2.length){
-        if(arr2[j] > arr1[i]){
-            result.push(arr2[j])
-            j++;
-        } else{
-            result.push(arr1[i])
-            i++
-        }
+function merge (left , right){
+    let result = [];
+    while (left.length && right.length) {
+      if (left[0] >= right[0]) {
+        result.push(left.shift());
+      } else {
+        result.push(right.shift());
+      }
     }
-    while(i< arr1.length){
-        result.push(arr1[i]);
-        i++;
-    }
-
-    while(j< arr2.length){
-        result.push(arr2[j])
-        j++;
-    }
-
-    return result
+    return result.concat(left, right);
 }
 
 console.log(mergeSort([3,5,7,8,9,1,0,8,]));
